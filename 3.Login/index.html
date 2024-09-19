@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="http://www.fontsquirrel.com/fonts/aller">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/keyframe.css">
+    <script src="script.js" defer ></script>
+</head>
+
+<body id="body">
+    <div class="main">
+        <div class="login__heading">
+            <div class="login__heading-logo">
+               <a href="" class="login__heading-logo--link">
+                <i class="fa-solid fa-moon heading__logo" id="toggleLightmode"></i>
+               </a>
+                <p class="heading__name">Megumi</p>
+            </div>
+    
+            <div class="login__heading-list">
+             <ul class="heading__list">
+                <li class="heading__item"><a href="" class="heading__link">HOME</a>
+                
+                </li>
+                <li class="heading__item"><a href="" class="heading__link">ABOUT US</a>
+                
+                </li>
+                <li class="heading__item"><a href="" class="heading__link">COURSE</a>
+                
+                </li>
+                <li class="heading__item"><a href="" class="heading__link">PRICING</a>
+                
+                </li>
+             </ul>
+            </div>
+    
+            <div class="login__heading-started">
+                <p class="heading__stared-item">
+                    <a href="#" class="heading__started-link js-login-btn">GET STARTED</a>
+                </p>
+            </div>
+            
+        </div>
+         
+        <div class="login__body">
+            <h1 class="body__header">Welcome To The Widerness</h1>
+             <p class="body__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque non veniam laudantium sint molestiae earum excepturi fuga officiis. Cum exercitationem eligendi necessitatibus veritatis sapiente accusamus laudantium magni impedit molestiae laborum?</p>
+        </div>
+    </div>
+ <!-- Modal login -->
+ 
+ <div class="modal__overlay   ">
+    <div class="login__modal ">
+        <div class="modal__header">
+            <div class="login__modal--off">
+              <i class="fa-solid fa-x login__off-icon"></i>
+            </div>
+            <h1 class="modal__header-content">Login</h1>
+        </div>
+         <form action="" class="modal__form">
+           <div class="modal__input-box">
+           <input type="text" class="modal__form-input modal__user-input" placeholder="Username">
+           <i class="fa-solid fa-user modal__icon modal__user-icon"></i>
+           </div>
+           <div class="modal__input-box">
+               <input type="password" class="modal__form-input modal__user-input" placeholder="Password">
+               <i class="fa-solid fa-lock modal__icon modal__user-icon"></i>
+           </div>
+           <div class="modal__sub-content">
+           <input type="checkbox" class="modal__remember">
+           <p class="modal__remember-text">Remember me</p>
+           <a href="" class="modal__forgot">Forgot password ?</a>
+       </div>
+       <a href="" class="modal__login-btn">
+        Login
+       </a>
+         </form>
+         
+        <div class="modal__footer">
+           <p class="modal__footer-content">Don't have a account?
+               <a href="" class="modal__footer-link">Register</a>
+           </p>
+        </div>
+     </div>
+ </div>
+
+ <script>
+    const loginBtns = document.querySelectorAll('.js-login-btn')
+const confirm = document.querySelector(".modal__overlay")
+const modalOff = document.querySelector('.login__modal--off')
+
+function showLogin() {
+  confirm.classList.add('modal__overlay-open') 
+}
+
+function offLogin() {
+ confirm.classList.remove('modal__overlay-open')
+}
+
+for (const loginBtn of loginBtns ) {
+    loginBtn.addEventListener('click', showLogin)
+}
+
+ modalOff.addEventListener('click', offLogin)
+
+ </script>
+</body>
+
+</html>
